@@ -798,6 +798,7 @@ footer ul li a:hover {
     .services_container .cards {
         row-gap: 1rem;
         grid-template-columns: repeat(2, 1fr);
+        max-height: max-content;
     }
     
     .services_container .cards .card {
