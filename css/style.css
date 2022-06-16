@@ -577,6 +577,7 @@ img {
     visibility:hidden;
     margin-top: -12em;
     margin-left: 0em;
+    
   }
   
   #team > figure:hover > .hoverable {
@@ -856,8 +857,17 @@ footer ul li a:hover {
         padding: 0.3rem 1rem;
     }
 
+    .header_container{
+        flex-direction: flex;
+        height: auto;
+    }
+    .header_container img{
+        width: 100%;
+        height: 450px;
+    }
     .about_container{
         flex-direction: column;
+        
     }
     .services_container .cards {
         display: flex;
