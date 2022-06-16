@@ -470,7 +470,7 @@ header::before {
 }
 
 .bar .progress-line.angular span {
-    width: 35%;
+    width: 40%;
 }
 
 .progress-line span::before {
@@ -514,7 +514,7 @@ header::before {
 }
 
 .progress-line.css span::after {
-    content: "70%";
+    content: "85%";
 }
 
 .progress-line.javascript span::after {
@@ -526,7 +526,7 @@ header::before {
 }
 
 .progress-line.angular span::after {
-    content: "35%";
+    content: "40%";
 }
 
 /* =======PORTFOLIO======= */
