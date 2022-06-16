@@ -868,13 +868,18 @@ footer ul li a:hover {
     }
     .about_container{
         flex-direction: column;
+
         
+    }
+    .about_container .about-text {
+        max-width: 90%;
     }
     .services_container .cards {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 3rem;
+        
     }
     
     .services_container .cards .card {
