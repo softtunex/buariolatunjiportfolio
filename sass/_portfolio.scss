@@ -1,0 +1,90 @@
+/* =======PORTFOLIO======= */
+
+    .projects{
+        text-align: center;
+        padding: 1rem ;
+
+      
+    
+        &-items{
+            width: 80vw;
+            margin: 1rem auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+            background-color: $black;
+            border-radius: 2rem;
+        
+        }
+        
+          
+        &-item{
+            position: relative;
+            border-bottom: 5px solid $primary;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            
+            &.isDisabled {
+                cursor: not-allowed !important;
+                opacity: 0.8;
+              }
+              
+
+            img{
+                width: 100%;
+                min-height: 40vh;
+            }    
+    
+            &::after{
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: $primary;
+                opacity: 0;
+                @include transistion-ease
+            }
+            &:hover{
+                &::after{
+                    top: 0;
+                    opacity: 0.9;
+                }
+                .projects-btn{
+                    opacity: 1;
+                    }  
+    
+            }
+            
+        }
+        &-btns{
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 2rem;
+            // align-items: center;
+            text-align: center;
+
+            .btns-grid{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            a:hover{
+                color: $black;
+            }
+        }
+        &-btn{
+            opacity: 0;
+            column-rule: set-text-color($primary);
+            @include transistion-ease;  
+        }
+
+        
+    }

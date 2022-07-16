@@ -1,0 +1,49 @@
+/* ======HEADER======= */
+header {
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    background-color: $black; 
+    
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: $bg;
+        width: 100%;
+        height: 5rem;
+        bottom: 0;
+        margin-bottom: -3.1rem;
+        z-index: 99;
+        transform: skewY(-2deg);
+        transform-origin: left;
+    }
+}
+.header_container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.header_left {
+    flex: 1;
+}
+.header_right {
+    flex: 1;
+
+    .text-1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.3rem;
+    }
+    .text-2 {
+        font-size: 3.6rem;
+        font-weight: 550;
+    }
+    .text-3 {
+        font-size: 2.5rem;
+        margin: 0.3rem 0;
+    }
+    .typing {
+        color: $primary;
+        font-weight: 500;
+    }
+}

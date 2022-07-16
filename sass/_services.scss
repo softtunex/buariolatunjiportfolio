@@ -1,0 +1,84 @@
+/* ======SERVICES======= */
+.img-logo{ 
+    img{
+    width: 100px;
+    border-radius: 50%;
+    display: inline;
+    justify-content: center;
+}
+}
+.services {
+    text-align: center;
+    margin-top: -5rem;
+
+    &_container  {
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+    .card {
+        background-color: $primary;
+        padding: 1.5rem 1rem;
+        margin: 0 1.5rem;
+        cursor: pointer;
+        position: relative;
+        min-height: 32rem;
+
+        &:hover::after {
+            transform: rotate(13deg);
+        }
+        &::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            background-color: $normal;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all 0.5s;
+        }
+    }
+    }
+    .sbox {
+        h3 {
+            font-size: 1.2rem;
+            color: $black;
+        }
+        p {
+            margin: 1.2rem 0;
+            color: $bg;
+    
+            a{
+                color: $normal;
+                font-weight:100 !important;
+                padding: 0rem 0rem !important;
+                background-color: transparent !important;
+                border-radius: 0 !important;
+    
+                &:hover {
+                    background-color: $normal;
+                    color: $bg;
+                    border: none;
+                }
+            }
+        }
+        a {
+            color: $normal;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 0.3rem 1rem;
+            background-color: $bg;
+            border-radius: 1rem;
+
+            &:hover {
+                background-color: $normal;
+                color: $bg;
+                border: 1px solid $bg;
+            }
+        }
+    } 
+}
