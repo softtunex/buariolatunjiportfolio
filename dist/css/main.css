@@ -310,10 +310,10 @@ header::before {
   content: "80%";
 }
 .skills_container .bar .progress-line.react span {
-  width: 60%;
+  width: 70%;
 }
 .skills_container .bar .progress-line.react span::after {
-  content: "60%";
+  content: "70%";
 }
 .skills_container .bar .progress-line.angular span {
   width: 50%;
