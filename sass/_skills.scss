@@ -54,6 +54,13 @@
                         content: "90%";
                     }
                 }
+                &.sass span {
+                    width: 80%;
+
+                    &::after {
+                        content: "80%";
+                    }
+                }
                 &.javascript span {
                     width: 80%;
 

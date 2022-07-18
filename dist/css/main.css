@@ -303,6 +303,12 @@ header::before {
 .skills_container .bar .progress-line.css span::after {
   content: "90%";
 }
+.skills_container .bar .progress-line.sass span {
+  width: 80%;
+}
+.skills_container .bar .progress-line.sass span::after {
+  content: "80%";
+}
 .skills_container .bar .progress-line.javascript span {
   width: 80%;
 }
