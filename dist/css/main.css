@@ -655,7 +655,7 @@ header::before {
   }
 }
 /* ========MEDIA QUERIES (MOBILE)======== */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 760px) {
   .container {
     width: 94%;
   }
@@ -829,4 +829,5 @@ footer .footer_copyright {
   margin-top: 4rem;
   padding: 1.2rem 0;
   border-top: 1px solid #ffffff;
-}/*# sourceMappingURL=main.css.map */
+}
+/*# sourceMappingURL=main.css.map */
