@@ -108,6 +108,11 @@ header::before {
   position: relative;
 }
 
+/* #eyes, #eyes img{
+  position: absolute;
+  width: 14px;
+ 
+} */
 .header_left {
   flex: 1;
 }
@@ -131,6 +136,7 @@ header::before {
   color: #29e9bc;
   font-weight: 500;
 }
+
 
 /* ======ABOUT ME======= */
 .about {
@@ -725,6 +731,7 @@ header::before {
   footer .footer_social {
     justify-content: center;
   }
+ 
 }
 body {
   line-height: 1.7;
@@ -839,5 +846,35 @@ footer .footer_copyright {
   margin-top: 4rem;
   padding: 1.2rem 0;
   border-top: 1px solid #ffffff;
+}
+.hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.show{
+  opacity: 1;
+  filter: blur(0);
+
+  transform: translateX(0);
+}
+
+/* @media screen and (min-width:1000px) {
+  
+  .body-container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  header,section,footer{
+    scroll-snap-align: start;
+  }
+} */
+
+@media(prefers-reduced-motion){
+  .hidden{
+    transition: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

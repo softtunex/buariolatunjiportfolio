@@ -1,3 +1,5 @@
+
+
 // Typing Script JS
 var typed = new Typed(".typing",{
     strings: ["Web Designer", "Web Developer"],
@@ -10,6 +12,34 @@ var typed = new Typed(".typing-2",{
     typeSpeed: 100,
     backSpeed: 60,
 });
+
+document.addEventListener('mousemove', (e) =>{
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    const anchor = document.getElementById('anchor')
+    const rekt = anchor.getBoundingClientRect();
+    const anchorX = rekt.left + rekt.width/2;
+    const anchorY = rekt.top + rekt.height/2;
+
+    const angleDeg = angle(mouseX, mouseY, anchorX, anchorY)
+
+    console.log(angleDeg)
+    const eyes = document.querySelectorAll('.eye')
+    eyes.forEach(eye=>{
+        eye.style.transform = `rotate(${90 + angleDeg}deg)`;
+    })
+})
+
+function angle(cx,cy,ex,ey){
+    const dy = ey -cy;
+    const dx = ex -cx;
+
+    const rad = Math.atan2(dy,dx)
+    const deg =rad *180/ Math.PI
+    return deg
+
+}
 
 // Show/Hide FAQs answer
 const faqs = document.querySelectorAll('.faq');
@@ -30,9 +60,25 @@ faqs.forEach(faq => {
 })
 
 //Show/hide nav menu
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        console.log(entry)
+        if(entry.isIntersecting){
+            entry.target.classList.add("show")
+        }
+        else{
+            entry.target.classList.remove("show")
+
+        }
+    })
+})
+
+const hiddenElement = document.querySelectorAll(".hidden")
 const menu = document.querySelector('.nav_menu');
 const menuBtn = document.querySelector('#open-menu-btn');
 const closeBtn = document.querySelector('#close-menu-btn');
+
+hiddenElement.forEach((el)=>observer.observe(el))
 
 menuBtn.addEventListener('click', () => {
     menu.style.display = "flex";

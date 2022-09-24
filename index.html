@@ -54,11 +54,16 @@
     <!-- Nav Section End Here -->
 
     <!-- Header Section Start Here -->
+    <div class="body-container">
     <header>
-      <div class="container header_container" id="home">
+      <div class="container header_container hidden" id="home">
         <div class="header_left">
           <div class="header_left_img">
-            <img src="image/Avatar.png" alt="Model Image" />
+            <img id="anchor" src="image/Avatar.png" alt="bitmoji Image" />
+            <!-- <div id="eyes" style="top:0;" >
+            <img class="eye" src="image/eye-modified.png" alt="eye Image" style="top:72px; left: 176px"/>
+            <img class="eye" src="image/eye-modified.png" alt="eye Image" style="top:82px; left: 215px"/>
+            </div> -->
           </div>
         </div>
         <div class="header_right">
@@ -66,7 +71,7 @@
           <div class="text-2">Buari Olatunji</div>
           <div class="text-3">And I'm a <span class="typing"></span></div>
           <a
-            href="https://www.linkedin.com/in/olatunji-buari-a87031190/"
+            href="mailto:buariolatunji@gmail.com"
             class="btn" target=”_blank” 
             >Hire Me</a
           >
@@ -76,7 +81,7 @@
     <!-- Header Section End Here -->
 
     <!-- About Me Section Start Here -->
-    <section class="about" id="about">
+    <section class="about hidden" id="about">
       <h2 class="border_bottom">About Me</h2>
       <div class="container about_container">
         <div class="about-img">
@@ -109,7 +114,7 @@
     <!-- About Me Section End Here -->
 
     <!-- My Services Section Start Here -->
-    <div class="services" id="service">
+    <section class="services hidden" id="service">
       <h2 class="border_bottom">My Experiences</h2>
       <div class="container services_container">
         <div class="cards">
@@ -167,11 +172,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- My Services Section End Here -->
 
     <!-- My Skills Section Start Here -->
-    <div class="skills" id="skills">
+    <section class="skills hidden" id="skills">
       <div class="new">
         <h2 class="border_bottom">My Skills</h2>
       </div>
@@ -225,11 +230,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- My Skills Section End Here -->
 
     <!-- My Portfolio Section Start Here -->
-    <div class="projects"  id="portfolio">
+    <section class="projects hidden"  id="portfolio">
       <div class="new">
           <h1 class="border_bottom">My projects</h1>
   </div>
@@ -363,13 +368,13 @@
       
   </div>
        
-        </div>
+        </section>
       
-    </section>
+    <!-- </section> -->
     <!-- My Portfolio Section End Here -->
 
     <!-- FAQs Section Start Here -->
-    <section class="faqs">
+    <section class="faqs hidden">
       <h2 class="border_bottom">Frequently Asked Question</h2>
       <div class="container faqs_container">
         <article class="faq">
@@ -535,6 +540,7 @@
         <small>Copyright &copy; Buari Olatunji</small>
       </div>
     </footer>
+  </div>
     <!-- Footer Section End Here -->
 
     <!-- Custom Javascript File Link -->
