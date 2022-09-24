@@ -688,7 +688,8 @@ header::before {
     font-size: 1.2rem;
   }
   .header_right a {
-    margin-bottom: 0.3rem;
+    margin-bottom: 3rem;
+
   }
   .btn {
     padding: 0.3rem 1rem;
