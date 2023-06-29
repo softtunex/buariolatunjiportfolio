@@ -1,130 +1,144 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
-@import 'config';
-@import 'nav';
-@import 'header';
-@import 'about';
-@import 'services';
-@import 'skills';
-@import 'portfolio';
-@import 'faq';
-@import 'responsive';
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap");
+@import "config";
+@import "nav";
+@import "header";
+@import "about";
+@import "services";
+@import "skills";
+@import "portfolio";
+@import "faq";
+@import "responsive";
 
 body {
-    line-height: 1.7;
-    color: $normal;
-    background-color: $bg;
+  line-height: 1.7;
+  color: $normal;
+  background-color: $bg;
 }
 
 .container {
-    width: $container-width-lg;
-    margin: 0 auto;
+  width: $container-width-lg;
+  margin: 0 auto;
 }
 
 section {
-    padding: 6rem 0;
- h2 {
+  padding: 6rem 0;
+  h2 {
     text-align: center;
     margin-bottom: 4rem;
-}
+  }
 }
 
 h1,
 h2,
 h3,
 h4 {
-    line-height: 1.2;
+  line-height: 1.2;
 }
 
 h1 {
-    font-size: 2.4rem;
+  font-size: 2.4rem;
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h3 {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 h4 {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 a {
-    color: $normal;
+  color: $normal;
 }
 img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
+  width: 100%;
+  display: block;
+  object-fit: cover;
 }
 .btn {
-    display: inline-block;
-    background-color: $primary;
-    color: $black;
-    padding: 0.5rem 2rem;
-    border: 1px solid transparent;
-    border-radius: 0.3rem;
-    font-weight: 500;
-    &:hover {
-        color: $primary;
-        background-color: transparent;
-        border-color: $primary;
-    }
+  display: inline-block;
+  background-color: $primary;
+  color: $black;
+  padding: 0.5rem 2rem;
+  border: 1px solid transparent;
+  border-radius: 0.3rem;
+  font-weight: 500;
+  &:hover {
+    color: $primary;
+    background-color: transparent;
+    border-color: $primary;
+  }
 }
 .border_bottom {
-    text-align: center;
-    display: inline-block;
-    border-bottom: 2px solid $primary;
-    color: $primary;
-    margin-bottom: 2.5rem;
+  text-align: center;
+  display: inline-block;
+  border-bottom: 2px solid $primary;
+  color: $primary;
+  margin-bottom: 2.5rem;
 }
 footer {
-    padding-top: 5rem;
-    background-color: $black;
-    font-size: 0.9rem;
+  padding-top: 5rem;
+  background-color: $black;
+  font-size: 0.9rem;
 
-
-.footer_container {
+  .footer_container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
 
-
-    &>div h4 {
-    margin-bottom: 1.2rem;
+    & > div h4 {
+      margin-bottom: 1.2rem;
     }
-}
-.footer_1 p {
+  }
+  .footer_1 p {
     margin: 0 0 2rem;
-}
+  }
 
-footer ul li {
+  footer ul li {
     margin-bottom: 0.7rem;
 
-
- a:hover {
-    text-decoration: underline;
-    color: $primary;
-}
-}
-.footer_4 .mail {
+    a:hover {
+      text-decoration: underline;
+      color: $primary;
+    }
+  }
+  .footer_4 .mail {
     text-transform: lowercase;
-}
+  }
 
-.footer_social {
+  .footer_social {
     display: flex;
     gap: 1rem;
     font-size: 1.2rem;
     margin-top: 2rem;
-}
+  }
 
-.footer_copyright {
+  .footer_copyright {
     text-align: center;
     margin-top: 4rem;
     padding: 1.2rem 0;
     border-top: 1px solid $normal;
+  }
 }
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
 }
