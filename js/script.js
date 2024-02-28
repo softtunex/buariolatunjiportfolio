@@ -20,32 +20,62 @@ var typed = new Typed(".typing-2", {
   typeSpeed: 100,
   backSpeed: 60,
 });
+const form = document.querySelector("form");
+const firstName = document.querySelector("#firstName");
+const lastName = document.querySelector("#lastName");
+const email = document.querySelector("#email");
+const message = document.querySelector("#message");
+const modal = document.getElementById("contactModal");
+function openModal() {
+  document.body.classList.add("modal-open");
+  modal.style.display = "flex";
+  // Add click event listener to modal background
+  window.addEventListener("click", outsideClick);
 
-document.addEventListener("mousemove", (e) => {
-  const mouseX = e.clientX;
-  const mouseY = e.clientY;
+  document.getElementById("contactModal").style.display = "flex";
+  window.addEventListener("click", outsideClick);
+}
 
-  const anchor = document.getElementById("anchor");
-  const rekt = anchor.getBoundingClientRect();
-  const anchorX = rekt.left + rekt.width / 2;
-  const anchorY = rekt.top + rekt.height / 2;
+function sendMessage() {
+  const bodyMessage = `<p>Hello,</p>
+  
+  <p>Someone is trying to reach out to you through your website's contact form. Please find the details below:</p>
+  
+  <ul>
+    <li><strong>Name:</strong> ${firstName?.value} ${lastName?.value}</li>
+    <li><strong>Email:</strong> ${email?.value}</li>
+    <li><strong>Message:</strong><br>${message?.value}</li>
+  </ul>
 
-  const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
+  <p>Kindly address this inquiry at your earliest convenience.</p>
 
-  console.log(angleDeg);
-  const eyes = document.querySelectorAll(".eye");
-  eyes.forEach((eye) => {
-    eye.style.transform = `rotate(${90 + angleDeg}deg)`;
-  });
+  <p>Best regards,<br>`;
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "iamtunex1@gmail.com",
+    Password: "978961AC042B14FB1BBADC11CC3995703D53",
+    To: "iamtunex1@gmail.com",
+    From: "iamtunex1@gmail.com",
+    Subject: "Someone is trying to reach out to you",
+    Body: bodyMessage,
+  }).then((message) => alert("Form submited successfully 🎉🎉🎉"));
+}
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  sendMessage();
+  closeModal();
 });
 
-function angle(cx, cy, ex, ey) {
-  const dy = ey - cy;
-  const dx = ex - cx;
-
-  const rad = Math.atan2(dy, dx);
-  const deg = (rad * 180) / Math.PI;
-  return deg;
+function closeModal() {
+  document.getElementById("contactModal").style.display = "none";
+  window.removeEventListener("click", outsideClick);
+  document.body.classList.remove("modal-open");
+}
+function outsideClick(e) {
+  // Close the modal if the click is outside the modal content
+  if (e.target === modal) {
+    closeModal();
+  }
 }
 
 // Show/Hide FAQs answer
@@ -67,7 +97,6 @@ faqs.forEach((faq) => {
 //Show/hide nav menu
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
     } else {

@@ -91,130 +91,51 @@
             <div class="text-1">I'm</div>
             <div class="text-2">Buari Olatunji</div>
             <div class="text-3">And I'm a <span class="typing"></span></div>
-            <a
-              href="mailto:buariolatunji@gmail.com"
-              class="btn"
-              target="”_blank”"
-              >Hire Me</a
-            >
+            <div style="display: flex; gap: 1rem">
+              <a onclick="openModal()" class="git-btn"> Get in touch </a>
+
+              <a
+                target="_blank"
+                href="https://drive.google.com/file/d/1mCc4dK0o8Wq3VE9QGOt268jmFvi34wR2/view?usp=sharing"
+                class="btn download-cv"
+                >Download CV</a
+              >
+
+              <a
+                target="_blank"
+                href="https://drive.google.com/file/d/1mCc4dK0o8Wq3VE9QGOt268jmFvi34wR2/view?usp=sharing"
+                class="btn download-icon"
+              >
+                <i class="fas fa-download"></i>
+                <!-- Font Awesome Download Icon -->
+              </a>
+            </div>
           </div>
         </div>
       </header>
       <!-- Header Section End Here -->
 
-      <!-- About Me Section Start Here -->
-      <section class="about hidden" id="about">
-        <h2 class="border_bottom">About Me</h2>
-        <div class="container about_container">
-          <div class="about-img">
-            <img src="image/about.png" alt="about model" />
-          </div>
-          <div class="about-text">
-            <div class="text">
-              I'm Buari Olatunji and I am a highly motivated and
-              progress-focused
-              <span class="typing-2"></span>
-            </div>
-            <p>
-              I am a graduate of Computer Science from Fountain University
-              Osogbo, Osun State, with a second class upper degree honour and a
-              track record of initiative and dependability. With my experiences
-              as a web developer, I have trained in different skills and I am
-              always eagar to learn more. I am a capable and consistent
-              problem-solver skilled at prioritizing and managing projects with
-              proficiency. I have proven to be effective and collaborative with
-              strong team talents and enjoy collective brainstorming sessions
-              with the aim to achieve a common goal.
-            </p>
-            <a
-              target="_blank"
-              href="https://drive.google.com/file/d/1ZXV-lBlIs2c3TX9uDHRmdjr24sSohNuX/view?usp=drive_link"
-              class="btn"
-              >Download CV</a
-            >
-          </div>
-        </div>
-      </section>
-      <!-- About Me Section End Here -->
+      <div class="modal" id="contactModal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Let's work together 🧑‍💻</h2>
+          <form action="#">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required />
 
-      <!-- My Services Section Start Here -->
-      <section class="services hidden" id="service">
-        <h2 class="border_bottom">My Experiences</h2>
-        <div class="container services_container">
-          <div class="cards">
-            <div class="card">
-              <div class="sbox">
-                <div class="img-logo">
-                  <img src="image/sidmachlogo.png" alt="about model" />
-                </div>
-                <h3>Software Developer</h3>
-                <h4>2021 - Current</h4>
-                <p>
-                  As a Software Developer at Sidmach Technologies, I thrive in
-                  building cutting-edge interfaces and leveraging APIs to create
-                  seamless user experiences. Sidmach Technologies specializes in
-                  developing scalable software solutions that tackle complex
-                  business challenges. Working alongside a dynamic team in this
-                  fast-paced environment has sharpened my skills and fueled my
-                  passion for delivering high-impact solutions.
-                </p>
-                <a target="_blank" href="https://sidmach.com/" target="_blank"
-                  >Learn More</a
-                >
-              </div>
-            </div>
-            <div class="card">
-              <div class="sbox">
-                <div class="img-logo">
-                  <img src="image/faam.png" alt="about model" />
-                </div>
-                <h3>Web Developer</h3>
-                <h4>2020-2021</h4>
-                <p>
-                  As a Web Developer at First Ally Asset Management (FAAM), I
-                  contribute to an innovative and client-centric asset
-                  management firm. FAAM is registered with the SEC and holds a
-                  (BBB+) rating by Agusto & Co. I work with a dynamic team to
-                  create engaging web solutions that enhance the firm's digital
-                  presence and provide an exceptional user experience for
-                  clients.
-                </p>
-                <a
-                  href="https://www.first-ally.com/subsidiaries/first-ally-asset-management/"
-                  target="_blank"
-                  >Learn More</a
-                >
-              </div>
-            </div>
-            <div class="card">
-              <div class="sbox">
-                <div class="img-logo">
-                  <img src="image/noraklogo.png" alt="about model" />
-                </div>
-                <h3>Software Developer intern (React)</h3>
-                <h4>2020</h4>
-                <p>
-                  As a Software Developer intern at Norak Technologies Ltd., I
-                  actively contributed to the development of AcadaSuite—an
-                  online teaching platform designed for primary and secondary
-                  schools in Nigeria. This valuable experience at Norak
-                  Technologies has enhanced my technical skills and deepened my
-                  passion for leveraging technology to make a positive impact in
-                  the education sector.
-                </p>
-                <a
-                  target="_blank"
-                  href="https://www.noraktech.com/"
-                  target="_blank"
-                  >Learn More</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- My Services Section End Here -->
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required />
 
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button class="git-btn" type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
       <!-- My Skills Section Start Here -->
       <section class="skills hidden" id="skills">
         <div class="new">
@@ -301,15 +222,137 @@
           </div>
         </div>
       </section>
+      <!-- My Services Section Start Here -->
+      <section class="services hidden" id="service">
+        <h2 class="border_bottom">My Experiences</h2>
+        <div class="container services_container">
+          <div class="cards">
+            <div class="card">
+              <div class="sbox">
+                <div class="img-logo">
+                  <img src="image/sidmachlogo.png" alt="about model" />
+                </div>
+                <h3>Software Developer</h3>
+                <h4>2021 - Current</h4>
+                <p>
+                  As a Software Developer at Sidmach Technologies, I thrive in
+                  building cutting-edge interfaces and leveraging APIs to create
+                  seamless user experiences. Sidmach Technologies specializes in
+                  developing scalable software solutions that tackle complex
+                  business challenges. Working alongside a dynamic team in this
+                  fast-paced environment has sharpened my skills and fueled my
+                  passion for delivering high-impact solutions.
+                </p>
+                <p></p>
+                <p>
+                  <b
+                    >Projects: YouthPlus, Edustat, Nysc Portal (Redesign), Waec
+                    HRIS, CarePlus</b
+                  >
+                </p>
+                <a target="_blank" href="https://sidmach.com/" target="_blank"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+            <div class="card">
+              <div class="sbox">
+                <div class="img-logo">
+                  <img src="image/faam.png" alt="about model" />
+                </div>
+                <h3>Web Developer</h3>
+                <h4>2020-2021</h4>
+                <p>
+                  As a Web Developer at First Ally Asset Management (FAAM), I
+                  contribute to an innovative and client-centric asset
+                  management firm. FAAM is registered with the SEC and holds a
+                  (BBB+) rating by Agusto & Co. I work with a dynamic team to
+                  create engaging web solutions that enhance the firm's digital
+                  presence and provide an exceptional user experience for
+                  clients.
+                </p>
+                <p></p>
+                <p>
+                  <b>Projects: MyInvestar Website, Myinvester Back-office</b>
+                </p>
+                <a
+                  href="https://www.first-ally.com/subsidiaries/first-ally-asset-management/"
+                  target="_blank"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+            <div class="card">
+              <div class="sbox">
+                <div class="img-logo">
+                  <img src="image/noraklogo.png" alt="about model" />
+                </div>
+                <h3>Software Developer intern (React)</h3>
+                <h4>2020</h4>
+                <p>
+                  As a Software Developer intern at Norak Technologies Ltd., I
+                  actively contributed to the development of AcadaSuite—an
+                  online teaching platform designed for primary and secondary
+                  schools in Nigeria. This valuable experience at Norak
+                  Technologies has enhanced my technical skills and deepened my
+                  passion for leveraging technology to make a positive impact in
+                  the education sector.
+                </p>
+                <p></p>
+                <p>
+                  <b>Project: Acadasuite</b>
+                </p>
+
+                <a
+                  target="_blank"
+                  href="https://www.noraktech.com/"
+                  target="_blank"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- My Services Section End Here -->
 
       <!-- My Portfolio Section Start Here -->
       <section class="projects hidden" id="portfolio">
         <div class="new">
-          <h1 class="border_bottom">My projects</h1>
+          <h1 class="border_bottom">My Projects</h1>
         </div>
         <div class="projects-items">
           <div class="projects-item">
-            <img src="image/loandashboard.png" alt="My project" />
+            <img src="image/myInvesterWeb.png" alt="My project" />
+            <div class="projects-btns">
+              <div class="btns-grid">
+                <a
+                  target="_blank"
+                  href="https://myinvestar.ng/"
+                  class="projects-btn"
+                >
+                  <i class="fas fa-eye"></i> preview
+                </a>
+                <div class="notification">
+                  <a
+                    class="projects-btn"
+                    title="Private company projects can't be shared"
+                  >
+                    <i class="fab fa-github"></i> Github
+                  </a>
+                </div>
+              </div>
+              <div class="">
+                <p class="projects-btn"><b>MyInvestar</b></p>
+                <span class="projects-btn"
+                  >An investing platform empowering Nigerians with access to
+                  financial services and products to grow wealth.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="projects-item">
+            <img src="image/myInvesterBackOffice.png" alt="My project" />
             <div class="projects-btns">
               <div class="btns-grid">
                 <a
@@ -319,18 +362,81 @@
                 >
                   <i class="fas fa-eye"></i> preview
                 </a>
-                <a
-                  href="https://github.com/softtunex/LoanAppTemplate"
-                  class="projects-btn"
-                >
-                  <i class="fab fa-github"></i> Github
-                </a>
+                <div class="notification">
+                  <a
+                    class="projects-btn"
+                    title="Private company projects can't be shared"
+                  >
+                    <i class="fab fa-github"></i> Github
+                  </a>
+                </div>
               </div>
               <div class="">
-                <p class="projects-btn"><b>Loan Dashboard</b></p>
+                <p class="projects-btn"><b>MyInvest Back Office</b></p>
                 <span class="projects-btn"
-                  >This project was created with sass React and Typescript, it
-                  is a template for a loan dashboard</span
+                  >A secure portal for managing myInvestar clients control and
+                  transparency into their investment accounts and
+                  performance.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="projects-item">
+            <img src="image/youthPlus.png" alt="My project" />
+            <div class="projects-btns">
+              <div class="btns-grid">
+                <a
+                  target="_blank"
+                  href="https://www.youthplus.ng/"
+                  class="projects-btn"
+                >
+                  <i class="fas fa-eye"></i> preview
+                </a>
+                <div class="notification">
+                  <a
+                    class="projects-btn"
+                    title="Private company projects can't be shared"
+                  >
+                    <i class="fab fa-github"></i> Github
+                  </a>
+                </div>
+              </div>
+              <div class="">
+                <p class="projects-btn"><b>YouthPlus</b></p>
+                <span class="projects-btn"
+                  >A social media platform built for Nigerian youth to connect,
+                  learn, and access empowering content and opportunities for
+                  personal growth.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="projects-item">
+            <img src="image/edustat.png" alt="My project" />
+            <div class="projects-btns">
+              <div class="btns-grid">
+                <a
+                  target="_blank"
+                  href="https://www.waec.edustat.ng/"
+                  class="projects-btn"
+                >
+                  <i class="fas fa-eye"></i> preview
+                </a>
+                <div class="notification">
+                  <a
+                    class="projects-btn"
+                    title="Private company projects can't be shared"
+                  >
+                    <i class="fab fa-github"></i> Github
+                  </a>
+                </div>
+              </div>
+              <div class="">
+                <p class="projects-btn"><b>Edustat</b></p>
+                <span class="projects-btn"
+                  >An educational analysis platform utilizing WAEC exam data to
+                  provide schools actionable insights for assessing and
+                  improving student outcomes.</span
                 >
               </div>
             </div>
@@ -522,12 +628,14 @@
                 >
                   <i class="fas fa-eye"></i> preview
                 </a>
-                <a
-                  class="projects-btn"
-                  title="Private company projects can't be shared"
-                >
-                  <i class="fab fa-github"></i> Github
-                </a>
+                <div class="notification">
+                  <a
+                    class="projects-btn"
+                    title="Private company projects can't be shared"
+                  >
+                    <i class="fab fa-github"></i> Github
+                  </a>
+                </div>
               </div>
               <div class="">
                 <p class="projects-btn"><b>Acadasuite</b></p>
@@ -567,6 +675,41 @@
           </div>
         </div>
       </section>
+
+      <!-- About Me Section Start Here -->
+      <section class="about hidden" id="about">
+        <h2 class="border_bottom">About Me</h2>
+        <div class="container about_container">
+          <div class="about-img">
+            <img src="image/about.png" alt="about model" />
+          </div>
+          <div class="about-text">
+            <div class="text">
+              I'm Buari Olatunji and I am a highly motivated and
+              progress-focused
+              <span class="typing-2"></span>
+            </div>
+            <p>
+              I am a graduate of Computer Science from Fountain University
+              Osogbo, Osun State, with a second class upper degree honour and a
+              track record of initiative and dependability. With my experiences
+              as a web developer, I have trained in different skills and I am
+              always eagar to learn more. I am a capable and consistent
+              problem-solver skilled at prioritizing and managing projects with
+              proficiency. I have proven to be effective and collaborative with
+              strong team talents and enjoy collective brainstorming sessions
+              with the aim to achieve a common goal.
+            </p>
+            <a
+              target="_blank"
+              href="https://drive.google.com/file/d/1iGuy3xO04Z4X9AIyOyHvszkvnOILj0Xq/view?usp=sharing"
+              class="btn"
+              >Download CV</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- About Me Section End Here -->
 
       <!-- Footer Section Start Here -->
       <footer>
@@ -629,6 +772,7 @@
     <!-- Footer Section End Here -->
 
     <!-- Custom Javascript File Link -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
