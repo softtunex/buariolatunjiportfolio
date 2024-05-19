@@ -12,7 +12,9 @@
   transition: all 0.5s linear;
   scroll-behavior: smooth;
 }
-
+a {
+  cursor: pointer;
+}
 /* Custom Scroll bar */
 ::-webkit-scrollbar {
   width: 10px;
