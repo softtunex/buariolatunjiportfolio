@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://buariolatunji.netlify.app/sitemap.xml
